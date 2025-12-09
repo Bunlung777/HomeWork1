@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:lastest
+    # container_name: pgdb
+    environment:
+      POSTGRES_USER: ssodev
+      POSTGRES_PASSWORD: sso2022ok
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+       - postgres_data:/var/lib/postgresql/data
+
+volumes:
+   postgres_data:
