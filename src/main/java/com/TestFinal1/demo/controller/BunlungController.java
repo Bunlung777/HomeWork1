@@ -36,7 +36,7 @@ public class BunlungController {
 
             ResponseCode error = new ResponseCode(
                     "E000001",
-                    e.getMessage(),
+                    e.getMessage()+"ไม่สามารถบันทึกข้อมูลลงฐานข้อมูลได้",
                     responseData
             );
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
